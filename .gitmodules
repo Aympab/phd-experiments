@@ -1,0 +1,3 @@
+[submodule "tpls/benchmark"]
+	path = tpls/benchmark
+	url = https://github.com/google/benchmark.git
