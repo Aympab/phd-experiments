@@ -63,8 +63,8 @@ createSyclQueue(const bool run_on_gpu, benchmark::State &state) {
 // =============================================
 [[nodiscard]] inline sycl::range<3>
 get_range_with_constraint(const size_t n2) {
-    const auto n_total = 33554432; //2**25
-    const auto n1 = 128;
+    const auto n_total = 4194304*2; //2**22
+    const auto n1 = 128*2;
     const auto n0 = n_total/n1/n2;
     return sycl::range<3>(n0, n1, n2);
 }
