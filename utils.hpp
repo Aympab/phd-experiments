@@ -20,7 +20,7 @@ using span3d_t =
     std::experimental::mdspan<real_t, std::experimental::dextents<size_t, 3>,
                               std::experimental::layout_right>;
 
-using local_acc = sycl::local_accessor<real_t, 3>;
+using local_acc_1d = sycl::local_accessor<real_t, 1>;
 
 using extents_t =
     std::experimental::extents<std::size_t, std::experimental::dynamic_extent,
@@ -29,13 +29,19 @@ using extents_t =
 
 
 // =============================================
+//                   SYCL utils
 // =============================================
+#ifdef SYCL_IMPLEMENTATION_ONEAPI
+#define GET_POINTER get_multi_ptr<sycl::access::decorated::no>().get
+#else
+#define GET_POINTER get_pointer
+#endif
+
 [[nodiscard]] inline auto
 sycl_alloc(size_t size, sycl::queue &q) {
     return sycl::malloc_shared<real_t>(size, q);
 }
 
-// =============================================
 [[nodiscard]] inline sycl::queue
 createSyclQueue(const bool run_on_gpu, benchmark::State &state) {
     sycl::device d;
@@ -52,6 +58,8 @@ createSyclQueue(const bool run_on_gpu, benchmark::State &state) {
     return sycl::queue{d};
 }   // end createSyclQueue
 
+// =============================================
+//               Benchmark utils
 // =============================================
 [[nodiscard]] inline sycl::range<3>
 get_range_with_constraint(const size_t n2) {

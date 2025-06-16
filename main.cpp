@@ -11,20 +11,39 @@ BM_LocalMem_Stride(benchmark::State &state) {
     const auto& n1 = data_range.get(1);
     const auto& n2 = data_range.get(2);
 
-    const auto w0 = 1;
-    const auto w1 = 128;
-    const auto w2 = 1;
-
     /* SYCL setup */
     auto Q = createSyclQueue(true, state);
     span3d_t data(sycl_alloc(n0*n1*n2, Q), n0, n1, n2);
     Q.wait();
+    Q.parallel_for(data_range, [=](auto itm){
+        const auto& i0 = itm[0];
+        const auto& i1 = itm[1];
+        const auto& i2 = itm[2];
+
+        data(i0, i1, i2) = sycl::cos(static_cast<float>(i0 + i1 + i2));
+    }).wait();
+
+    const auto w0 = 1;
+    const auto w1 = 128;
+    const auto w2 = 1;
+    sycl::range<3> local_range(w0,w1,w2);
+    sycl::nd_range ndr(data_range, local_range);
 
     /* Benchmark */
     for (auto _ : state) {
         try {
-            // bkma_run_function(Q, data, solver, optim_params, span3d_t{});
-            Q.wait();
+            Q.submit([&](sycl::handler &cgh){
+            local_acc_1d local_acc(w1, cgh);
+                cgh.parallel_for(ndr, [=](auto itm){
+                    span1d_t scratch(local_acc.GET_POINTER(), w1);
+
+                    const auto& i0 = itm.get_global_id(0);
+                    const auto& i1 = itm.get_global_id(1);
+                    const auto& i2 = itm.get_global_id(2);
+
+                    scratch(i1) = data(i0, i1, i2);
+                });
+            }).wait();
         } catch (const sycl::exception &e) {
             state.SkipWithError(e.what());
         } catch (const std::exception &e) {
@@ -54,8 +73,8 @@ BM_LocalMem_Stride(benchmark::State &state) {
 }
 
 // ==========================================
-BENCHMARK(BM_Advection)
-    ->Name("main-BKM-bench")
+BENCHMARK(BM_LocalMem_Stride)
+    ->Name("LocalMem_Stride")
     ->RangeMultiplier(2)->Range(1, 1024)
     ->UseRealTime()
     ->Unit(benchmark::kMillisecond);

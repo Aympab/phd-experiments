@@ -29,7 +29,8 @@ function(add_bench_executable name)
   
     target_link_libraries(${name}
     PUBLIC
-    benchmark::benchmark)
+    benchmark::benchmark
+    mdspan)
   
     target_include_directories(${name}
       PUBLIC
