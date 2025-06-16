@@ -1,24 +1,29 @@
 #include "utils.hpp"
 
 static void
-BM_MemorySpaces_Stride(benchmark::State &state) {
+BM_GlobalMem_Stride(benchmark::State &state) {}
+
+static void
+BM_LocalMem_Stride(benchmark::State &state) {
+    const auto data_range = get_range_with_constraint(state.range(0));
+
+    const auto& n0 = data_range.get(0);
+    const auto& n1 = data_range.get(1);
+    const auto& n2 = data_range.get(2);
+
+    const auto w0 = 1;
+    const auto w1 = 128;
+    const auto w2 = 1;
+
     /* SYCL setup */
-    auto Q = createSyclQueue(params.gpu, state);
+    auto Q = createSyclQueue(true, state);
     span3d_t data(sycl_alloc(n0*n1*n2, Q), n0, n1, n2);
     Q.wait();
-    fill_buffer_adv(Q, data, params);
-    Q.wait();
-    
-    /* Advector setup */
-    AdvectionSolver solver(params);
-    auto optim_params = create_optim_params<ADVParams>(Q, params);
-    auto impl_str = state.range(1) == 0 ? "ndrange" : "adaptivewg";
-    auto bkma_run_function = impl_selector<AdvectionSolver>(impl_str);
 
     /* Benchmark */
     for (auto _ : state) {
         try {
-            bkma_run_function(Q, data, solver, optim_params, span3d_t{});
+            // bkma_run_function(Q, data, solver, optim_params, span3d_t{});
             Q.wait();
         } catch (const sycl::exception &e) {
             state.SkipWithError(e.what());
@@ -28,28 +33,20 @@ BM_MemorySpaces_Stride(benchmark::State &state) {
         }
     }
 
-    params.maxIter = state.iterations();
+    const auto n_iter = state.iterations();
 
-    state.SetItemsProcessed(params.maxIter * n0 * n1 * n2);
-    state.SetBytesProcessed(params.maxIter * n0 * n1 * n2 *
-                            sizeof(real_t)*2);
-    auto err = validate_result_adv(Q, data, params, false);
+    state.SetItemsProcessed(n_iter * n0 * n1 * n2);
+    state.SetBytesProcessed(n_iter * n0 * n1 * n2 * sizeof(real_t)*2);
 
-    // if (err > 10e-6) {
-    //     state.SkipWithError("Validation failed with numerical error > 10e-6.");
-    // }
-
-        /* Benchmark infos */
+          /* Benchmark infos */
         state.counters.insert({
-            {"gpu", params.gpu},
+            {"gpu", true},
             {"n0", n0},
             {"n1", n1},
             {"n2", n2},
-            {"kernel_id", state.range(1)},
-            {"pref_wg_size", params.pref_wg_size},
-            {"seq_size0", params.seq_size0},
-            {"seq_size2", params.seq_size2},
-            {"err", err}
+            {"w0", w0},
+            {"w1", w1},
+            {"w2", w2},
         });
 
     sycl::free(data.data_handle(), Q);
@@ -57,15 +54,9 @@ BM_MemorySpaces_Stride(benchmark::State &state) {
 }
 
 // ==========================================
-BENCHMARK(BM_Advection)->Name("main-BKM-bench")
-    ->ArgsProduct({
-        {/*0, */1}, /*gpu*/
-        IMPL_RANGE, /* impl */
-        benchmark::CreateDenseRange(0, 9, 1), /*size from the array*/
-        {128, 1024},         /*w*/
-        SEQ_SIZE0,
-        SEQ_SIZE2,
-    })
+BENCHMARK(BM_Advection)
+    ->Name("main-BKM-bench")
+    ->RangeMultiplier(2)->Range(1, 1024)
     ->UseRealTime()
     ->Unit(benchmark::kMillisecond);
 

@@ -1,5 +1,6 @@
 #include <benchmark/benchmark.h>
 #include <sycl/sycl.hpp>
+#include <experimental/mdspan>
 
 // =============================================
 //                    Types
@@ -34,6 +35,7 @@ sycl_alloc(size_t size, sycl::queue &q) {
     return sycl::malloc_shared<real_t>(size, q);
 }
 
+// =============================================
 [[nodiscard]] inline sycl::queue
 createSyclQueue(const bool run_on_gpu, benchmark::State &state) {
     sycl::device d;
@@ -50,3 +52,11 @@ createSyclQueue(const bool run_on_gpu, benchmark::State &state) {
     return sycl::queue{d};
 }   // end createSyclQueue
 
+// =============================================
+[[nodiscard]] inline sycl::range<3>
+get_range_with_constraint(const size_t n2) {
+    const auto n_total = 33554432; //2**25
+    const auto n1 = 128;
+    const auto n0 = n_total/n1/n2;
+    return sycl::range<3>(n0, n1, n2);
+}
