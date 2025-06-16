@@ -1,32 +1,7 @@
-#include "bench_config.hpp"
-#include "bench_utils.hpp"
-#include <AdvectionParams.hpp>
-#include <AdvectionSolver.hpp>
-#include <sycl/sycl.hpp>
-#include <init.hpp>
-#include <validation.hpp>
+#include "utils.hpp"
 
-#include <bkma.hpp>
-#include <types.hpp>
-#include <impl_selector.hpp>
-
-
-
-// ==========================================
-// ==========================================
-/* Benchmark the impact of wg_size on Hierarchical kernel */
 static void
-BM_Advection(benchmark::State &state) {
-
-    BenchParams bench_params(state);
-    auto& params = bench_params.adv_params;
-    params.n0 = EXP_SIZES[state.range(2)].n0_;
-    params.n1 = EXP_SIZES[state.range(2)].n1_;
-    params.n2 = EXP_SIZES[state.range(2)].n2_;
-    auto const &n0 = params.n0;
-    auto const &n1 = params.n1;
-    auto const &n2 = params.n2;
-
+BM_MemorySpaces_Stride(benchmark::State &state) {
     /* SYCL setup */
     auto Q = createSyclQueue(params.gpu, state);
     span3d_t data(sycl_alloc(n0*n1*n2, Q), n0, n1, n2);
