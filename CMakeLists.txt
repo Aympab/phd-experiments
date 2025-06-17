@@ -2,7 +2,8 @@ cmake_minimum_required (VERSION 3.20)
 
 project(phd-experiments LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_STANDARD_REQUIRED ON) 
+set(CMAKE_BUILD_TYPE "Release")
 
 find_package(benchmark REQUIRED)
 
@@ -16,8 +17,8 @@ endif()
 add_library(dpcpp_opt INTERFACE)
 if(NOT SYCL_IS_ACPP)
     message(STATUS "Setting flags for IntelLLVM compiler")
-    target_link_options(dpcpp_opt INTERFACE -fno-sycl-id-queries-fit-in-int -fsycl ${DPCPP_FSYCL_TARGETS})
-    target_compile_options(dpcpp_opt INTERFACE -fno-sycl-id-queries-fit-in-int -fsycl ${DPCPP_FSYCL_TARGETS})
+    target_link_options(dpcpp_opt INTERFACE -fno-fast-math -fno-sycl-id-queries-fit-in-int -fsycl ${DPCPP_FSYCL_TARGETS})
+    target_compile_options(dpcpp_opt INTERFACE -fno-fast-math -fno-sycl-id-queries-fit-in-int -fsycl ${DPCPP_FSYCL_TARGETS})
 else()
     message(STATUS "To add correct flags for DPCPP compiler, use the "
     "DPCPP_FSYCL_TARGETS' variable. Example: "
