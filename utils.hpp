@@ -39,7 +39,7 @@ using extents_t =
 
 [[nodiscard]] inline auto
 sycl_alloc(size_t size, sycl::queue &q) {
-    return sycl::malloc_shared<real_t>(size, q);
+    return sycl::malloc_device<real_t>(size, q);
 }
 
 [[nodiscard]] inline sycl::queue

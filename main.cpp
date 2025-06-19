@@ -109,8 +109,8 @@ BM_LocalMem_Stride(benchmark::State &state) {
 
                     scratch(i1) = data(i0, i1, i2);
 
-		    if(i0 == 0 && i1 == 0 && i2 == n2-1)
-		    	data(0,0,0) = scratch(i1);
+                    if(i0 == 0 && i1 == 0 && i2 == n2-1)
+                        data(0,0,0) = scratch(i1);
                 });
             }).wait();
         } catch (const sycl::exception &e) {

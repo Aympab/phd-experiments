@@ -1,8 +1,10 @@
 #!/bin/bash
 
 export REP=50
-export EXE="/home/ac.amillan/source/phd-experiments/build_acpp_pvc/main"
-export OUTFILE="/home/ac.amillan/source/phd-experiments/out/memory-spaces/acpp_${REP}_reps_pvc.json"
+export HW=mi300
+export IMPL=acpp
+export EXE="/home/ac.amillan/source/phd-experiments/build_${IMPL}_${HW}/main"
+export OUTFILE="/home/ac.amillan/source/phd-experiments/out/memory-spaces/${IMPL}_${REP}_reps_${HW}.json"
 
 $EXE --benchmark_counters_tabular=true \
      --benchmark_report_aggregates_only=true \
