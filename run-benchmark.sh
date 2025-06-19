@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export REP=50
-export HW=mi300
+export HW=pvc
 export IMPL=acpp
 export EXE="/home/ac.amillan/source/phd-experiments/build_${IMPL}_${HW}/main"
 export OUTFILE="/home/ac.amillan/source/phd-experiments/out/memory-spaces/${IMPL}_${REP}_reps_${HW}.json"
