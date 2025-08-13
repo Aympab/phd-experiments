@@ -1,0 +1,167 @@
+{
+  "compiler": "dpcpp",
+  "hardware": "pvc",
+  "executable": "/home/ac.amillan/source/parallel-advection/build_dpcpp_pvc/src/advection",
+  "cases": {
+    "case0.ini": {
+      "time_per_iter": {
+        "mean": 0.0,
+        "median": 0.0,
+        "stdev": 0.0,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 0.0,
+        "median": 0.0,
+        "stdev": 0.0,
+        "unit": "GB/s"
+      },
+      "runs_completed": 0,
+      "status": "error"
+    },
+    "case1.ini": {
+      "time_per_iter": {
+        "mean": 0.0,
+        "median": 0.0,
+        "stdev": 0.0,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 0.0,
+        "median": 0.0,
+        "stdev": 0.0,
+        "unit": "GB/s"
+      },
+      "runs_completed": 0,
+      "status": "error"
+    },
+    "case2.ini": {
+      "time_per_iter": {
+        "mean": 0.0,
+        "median": 0.0,
+        "stdev": 0.0,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 0.0,
+        "median": 0.0,
+        "stdev": 0.0,
+        "unit": "GB/s"
+      },
+      "runs_completed": 0,
+      "status": "error"
+    },
+    "case3.ini": {
+      "time_per_iter": {
+        "mean": 0.0,
+        "median": 0.0,
+        "stdev": 0.0,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 0.0,
+        "median": 0.0,
+        "stdev": 0.0,
+        "unit": "GB/s"
+      },
+      "runs_completed": 0,
+      "status": "error_missing_ini"
+    },
+    "case4.ini": {
+      "time_per_iter": {
+        "mean": 1.8263,
+        "median": 1.82671,
+        "stdev": 0.0027921944774674523,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 18.81388,
+        "median": 18.8096,
+        "stdev": 0.028786924114952338,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    },
+    "case5.ini": {
+      "time_per_iter": {
+        "mean": 2.194774,
+        "median": 2.19289,
+        "stdev": 0.004700492527384793,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 15.6553,
+        "median": 15.6687,
+        "stdev": 0.03349723869216698,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    },
+    "case6.ini": {
+      "time_per_iter": {
+        "mean": 0.092915,
+        "median": 0.0929234,
+        "stdev": 2.705688452132181e-05,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 369.7976,
+        "median": 369.764,
+        "stdev": 0.10791802444449275,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    },
+    "case7.ini": {
+      "time_per_iter": {
+        "mean": 3.917996,
+        "median": 3.92177,
+        "stdev": 0.08060528103046347,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 27.19032,
+        "median": 27.1551,
+        "stdev": 0.5523051937108684,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    },
+    "case8.ini": {
+      "time_per_iter": {
+        "mean": 98.88924,
+        "median": 98.8899,
+        "stdev": 0.009956304535317895,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 0.3474566,
+        "median": 0.347454,
+        "stdev": 3.4753417098185875e-05,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    },
+    "case9.ini": {
+      "time_per_iter": {
+        "mean": 0.08962018,
+        "median": 0.0897931,
+        "stdev": 0.00041837224692849943,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 383.3994,
+        "median": 382.655,
+        "stdev": 1.8004930713557425,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    }
+  }
+}
