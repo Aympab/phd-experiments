@@ -1,0 +1,423 @@
+{
+  "executable": "/home/ac.amillan/source/parallel-advection/build_cuda_ldg/src/advection",
+  "cases": {
+    "ndrange_n2_1": {
+      "n0": 16384,
+      "n1": 1024,
+      "n2": 1,
+      "time_per_iter": {
+        "mean": 0.0003881512,
+        "median": 0.000387948,
+        "stdev": 4.926608366817863e-07,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 691.5756,
+        "median": 691.937,
+        "stdev": 0.8766457665442594,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    },
+    "ndrange_n2_2": {
+      "n0": 16384,
+      "n1": 1024,
+      "n2": 2,
+      "time_per_iter": {
+        "mean": 0.0007850878,
+        "median": 0.000784795,
+        "stdev": 1.3218987101892746e-06,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 683.8372,
+        "median": 684.091,
+        "stdev": 1.1501111685397833,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    },
+    "ndrange_n2_4": {
+      "n0": 16384,
+      "n1": 1024,
+      "n2": 4,
+      "time_per_iter": {
+        "mean": 0.001734916,
+        "median": 0.00173495,
+        "stdev": 4.471912342611523e-07,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 618.9005999999999,
+        "median": 618.888,
+        "stdev": 0.1597366582848007,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    },
+    "ndrange_n2_8": {
+      "n0": 16384,
+      "n1": 1024,
+      "n2": 8,
+      "time_per_iter": {
+        "mean": 0.004057014,
+        "median": 0.0040577,
+        "stdev": 1.4007783550583438e-06,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 529.3262,
+        "median": 529.237,
+        "stdev": 0.1827654234257523,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    },
+    "ndrange_n2_16": {
+      "n0": 16384,
+      "n1": 1024,
+      "n2": 16,
+      "time_per_iter": {
+        "mean": 0.01177482,
+        "median": 0.0117781,
+        "stdev": 8.006372461982817e-06,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 364.7588,
+        "median": 364.656,
+        "stdev": 0.24914895143267698,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    },
+    "ndrange_n2_32": {
+      "n0": 16384,
+      "n1": 1024,
+      "n2": 32,
+      "time_per_iter": {
+        "mean": 0.02391292,
+        "median": 0.0239126,
+        "stdev": 2.068090907092876e-06,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 359.217,
+        "median": 359.222,
+        "stdev": 0.031008063467424588,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    },
+    "ndrange_n2_64": {
+      "n0": 16384,
+      "n1": 1024,
+      "n2": 64,
+      "time_per_iter": {
+        "mean": 0.0472296,
+        "median": 0.0472301,
+        "stdev": 5.31413210223611e-06,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 363.7518,
+        "median": 363.748,
+        "stdev": 0.041197087275692365,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    },
+    "ndrange_n2_128": {
+      "n0": 16384,
+      "n1": 1024,
+      "n2": 128,
+      "time_per_iter": {
+        "mean": 0.09320342,
+        "median": 0.0932139,
+        "stdev": 3.2605168301973605e-05,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 368.65319999999997,
+        "median": 368.612,
+        "stdev": 0.12896782544494653,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    },
+    "ndrange_n2_256": {
+      "n0": 16384,
+      "n1": 1024,
+      "n2": 256,
+      "time_per_iter": {
+        "mean": 0.1889162,
+        "median": 0.188917,
+        "stdev": 3.3466401061396493e-06,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 363.7562,
+        "median": 363.755,
+        "stdev": 0.0065345237010956195,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    },
+    "ndrange_n2_512": {
+      "n0": 16384,
+      "n1": 1024,
+      "n2": 512,
+      "time_per_iter": {
+        "mean": 0.3702318,
+        "median": 0.37023,
+        "stdev": 6.942621983095653e-06,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 371.2242,
+        "median": 371.226,
+        "stdev": 0.006942621983082675,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    },
+    "ndrange_n2_1024": {
+      "n0": 16384,
+      "n1": 1024,
+      "n2": 1024,
+      "time_per_iter": {
+        "mean": 0.0,
+        "median": 0.0,
+        "stdev": 0.0,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 0.0,
+        "median": 0.0,
+        "stdev": 0.0,
+        "unit": "GB/s"
+      },
+      "runs_completed": 0,
+      "status": "error"
+    },
+    "ldg_n2_1": {
+      "n0": 16384,
+      "n1": 1024,
+      "n2": 1,
+      "time_per_iter": {
+        "mean": 0.0004294674,
+        "median": 0.000429547,
+        "stdev": 4.837822857443264e-07,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 625.0436,
+        "median": 624.927,
+        "stdev": 0.7043626906644072,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    },
+    "ldg_n2_2": {
+      "n0": 16384,
+      "n1": 1024,
+      "n2": 2,
+      "time_per_iter": {
+        "mean": 0.0008534982,
+        "median": 0.000853574,
+        "stdev": 6.008508134304394e-07,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 629.0244,
+        "median": 628.968,
+        "stdev": 0.44275139751333603,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    },
+    "ldg_n2_4": {
+      "n0": 16384,
+      "n1": 1024,
+      "n2": 4,
+      "time_per_iter": {
+        "mean": 0.001866566,
+        "median": 0.0018663,
+        "stdev": 5.548693539924393e-07,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 575.2496,
+        "median": 575.331,
+        "stdev": 0.17065257103249556,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    },
+    "ldg_n2_8": {
+      "n0": 16384,
+      "n1": 1024,
+      "n2": 8,
+      "time_per_iter": {
+        "mean": 0.004534482,
+        "median": 0.0045342,
+        "stdev": 1.112416288985215e-06,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 473.5896,
+        "median": 473.619,
+        "stdev": 0.11610469413423678,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    },
+    "ldg_n2_16": {
+      "n0": 16384,
+      "n1": 1024,
+      "n2": 16,
+      "time_per_iter": {
+        "mean": 0.01284354,
+        "median": 0.0128435,
+        "stdev": 6.158165311194509e-06,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 334.407,
+        "median": 334.407,
+        "stdev": 0.16003280913613094,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    },
+    "ldg_n2_32": {
+      "n0": 16384,
+      "n1": 1024,
+      "n2": 32,
+      "time_per_iter": {
+        "mean": 0.02586604,
+        "median": 0.0258649,
+        "stdev": 4.73634880472298e-06,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 332.0932,
+        "median": 332.107,
+        "stdev": 0.060578048829601244,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    },
+    "ldg_n2_64": {
+      "n0": 16384,
+      "n1": 1024,
+      "n2": 64,
+      "time_per_iter": {
+        "mean": 0.05164288,
+        "median": 0.0516438,
+        "stdev": 4.382579149313556e-06,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 332.66700000000003,
+        "median": 332.661,
+        "stdev": 0.028222331583333937,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    },
+    "ldg_n2_128": {
+      "n0": 16384,
+      "n1": 1024,
+      "n2": 128,
+      "time_per_iter": {
+        "mean": 0.1013802,
+        "median": 0.101386,
+        "stdev": 2.6752569970005828e-05,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 338.9202,
+        "median": 338.901,
+        "stdev": 0.08974240914974208,
+        "unit": "GB/s"
+      },
+      "runs_completed": 5,
+      "status": "ok"
+    },
+    "ldg_n2_256": {
+      "n0": 16384,
+      "n1": 1024,
+      "n2": 256,
+      "time_per_iter": {
+        "mean": 0.0,
+        "median": 0.0,
+        "stdev": 0.0,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 0.0,
+        "median": 0.0,
+        "stdev": 0.0,
+        "unit": "GB/s"
+      },
+      "runs_completed": 0,
+      "status": "error"
+    },
+    "ldg_n2_512": {
+      "n0": 16384,
+      "n1": 1024,
+      "n2": 512,
+      "time_per_iter": {
+        "mean": 0.0,
+        "median": 0.0,
+        "stdev": 0.0,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 0.0,
+        "median": 0.0,
+        "stdev": 0.0,
+        "unit": "GB/s"
+      },
+      "runs_completed": 0,
+      "status": "error"
+    },
+    "ldg_n2_1024": {
+      "n0": 16384,
+      "n1": 1024,
+      "n2": 1024,
+      "time_per_iter": {
+        "mean": 0.0,
+        "median": 0.0,
+        "stdev": 0.0,
+        "unit": "sec"
+      },
+      "estimated_throughput": {
+        "mean": 0.0,
+        "median": 0.0,
+        "stdev": 0.0,
+        "unit": "GB/s"
+      },
+      "runs_completed": 0,
+      "status": "error"
+    }
+  }
+}
