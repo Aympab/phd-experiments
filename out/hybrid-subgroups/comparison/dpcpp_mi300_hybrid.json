@@ -1,0 +1,83 @@
+{
+  "impl": "hybrid",
+  "hardware": "mi300",
+  "executable": "/home/ac.amillan/source/hybrid-paradv/build_dpcpp_mi300/src/advection",
+  "runs_per_config": 5,
+  "cases": {
+    "case0": {
+      "problem": {
+        "n0": 32768,
+        "n1": 64,
+        "n2": 1
+      },
+      "wg_size": 512,
+      "result": {
+        "runs_completed": 5,
+        "status": "ok",
+        "bytes_per_sec": {
+          "mean": 23745500000.0,
+          "median": 23724200000.0,
+          "stdev": 123791619.26398733,
+          "unit": "B/s"
+        }
+      }
+    },
+    "case1": {
+      "problem": {
+        "n0": 512,
+        "n1": 64,
+        "n2": 1
+      },
+      "wg_size": 512,
+      "result": {
+        "runs_completed": 5,
+        "status": "ok",
+        "bytes_per_sec": {
+          "mean": 519217200.0,
+          "median": 520528000.0,
+          "stdev": 6524377.11203148,
+          "unit": "B/s"
+        }
+      }
+    },
+    "case2": {
+      "problem": {
+        "n0": 512,
+        "n1": 6144,
+        "n2": 64
+      },
+      "wg_size": 512,
+      "result": {
+        "runs_completed": 5,
+        "status": "ok",
+        "bytes_per_sec": {
+          "mean": 4482616000.0,
+          "median": 4488360000.0,
+          "stdev": 12881536.399048058,
+          "unit": "B/s"
+        }
+      }
+    },
+    "case3": {
+      "problem": {
+        "n0": 8,
+        "n1": 6144,
+        "n2": 64
+      },
+      "wg_size": 512,
+      "result": {
+        "runs_completed": 5,
+        "status": "ok",
+        "bytes_per_sec": {
+          "mean": 3862838000.0,
+          "median": 3866530000.0,
+          "stdev": 19281148.04673207,
+          "unit": "B/s"
+        }
+      }
+    }
+  },
+  "notes": {
+    "config_source": "hybrid=best known; others=wg sweep"
+  }
+}

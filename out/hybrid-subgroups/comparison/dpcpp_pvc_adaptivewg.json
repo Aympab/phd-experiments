@@ -1,0 +1,83 @@
+{
+  "impl": "adaptivewg",
+  "hardware": "pvc",
+  "executable": "/home/ac.amillan/source/parallel-advection/build_dpcpp_pvc/src/advection",
+  "runs_per_config": 5,
+  "cases": {
+    "case0": {
+      "problem": {
+        "n0": 32768,
+        "n1": 64,
+        "n2": 1
+      },
+      "wg_size": 128,
+      "result": {
+        "runs_completed": 5,
+        "status": "ok",
+        "bytes_per_sec": {
+          "mean": 430580600000.0,
+          "median": 430663000000.0,
+          "stdev": 1607825643.532283,
+          "unit": "B/s"
+        }
+      }
+    },
+    "case1": {
+      "problem": {
+        "n0": 512,
+        "n1": 64,
+        "n2": 1
+      },
+      "wg_size": 1024,
+      "result": {
+        "runs_completed": 5,
+        "status": "ok",
+        "bytes_per_sec": {
+          "mean": 27313960000.0,
+          "median": 27226200000.0,
+          "stdev": 176029352.66596875,
+          "unit": "B/s"
+        }
+      }
+    },
+    "case2": {
+      "problem": {
+        "n0": 512,
+        "n1": 6144,
+        "n2": 64
+      },
+      "wg_size": 1024,
+      "result": {
+        "runs_completed": 5,
+        "status": "ok",
+        "bytes_per_sec": {
+          "mean": 367694800000.0,
+          "median": 367985000000.0,
+          "stdev": 1101521765.5589018,
+          "unit": "B/s"
+        }
+      }
+    },
+    "case3": {
+      "problem": {
+        "n0": 8,
+        "n1": 6144,
+        "n2": 64
+      },
+      "wg_size": 1024,
+      "result": {
+        "runs_completed": 5,
+        "status": "ok",
+        "bytes_per_sec": {
+          "mean": 335150800000.0,
+          "median": 335912000000.0,
+          "stdev": 2005790417.765525,
+          "unit": "B/s"
+        }
+      }
+    }
+  },
+  "notes": {
+    "config_source": "hybrid=best known; others=wg sweep"
+  }
+}
