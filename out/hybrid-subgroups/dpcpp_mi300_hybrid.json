@@ -1,0 +1,1633 @@
+{
+  "impl": "hybrid",
+  "hardware": "mi300",
+  "executable": "/home/ac.amillan/source/hybrid-paradv/build_dpcpp_mi300/src/advection",
+  "runs_per_config": 5,
+  "cases": {
+    "case0": {
+      "problem": {
+        "n0": 32768,
+        "n1": 64,
+        "n2": 1
+      },
+      "subgroups_sweep": {
+        "sgrps": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "entries": [
+          {
+            "S": 1,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "nSubgroups_Local": 1,
+                  "nSubgroups_Global": 0
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 15793440000.0,
+                  "median": 15844100000.0,
+                  "stdev": 183705329.26401454,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "nSubgroups_Local": 0,
+                  "nSubgroups_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 13850660000.0,
+                  "median": 13832100000.0,
+                  "stdev": 162555753.51244876,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "nSubgroups_Local": 0,
+                  "nSubgroups_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 14201260000.0,
+                  "median": 14133000000.0,
+                  "stdev": 403670983.59926736,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "S": 2,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "nSubgroups_Local": 2,
+                  "nSubgroups_Global": 0
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 16915640000.0,
+                  "median": 16847000000.000002,
+                  "stdev": 180041559.09122667,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "nSubgroups_Local": 0,
+                  "nSubgroups_Global": 2
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 14768360000.0,
+                  "median": 14771200000.0,
+                  "stdev": 79934929.78667086,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "nSubgroups_Local": 1,
+                  "nSubgroups_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 16190360000.0,
+                  "median": 16237400000.0,
+                  "stdev": 223672613.4331157,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "S": 4,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "nSubgroups_Local": 4,
+                  "nSubgroups_Global": 0
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "nSubgroups_Local": 0,
+                  "nSubgroups_Global": 4
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 14682540000.0,
+                  "median": 14677100000.0,
+                  "stdev": 112339454.33372907,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "nSubgroups_Local": 2,
+                  "nSubgroups_Global": 2
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 16250940000.0,
+                  "median": 16167300000.0,
+                  "stdev": 170616889.55082908,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "S": 8,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "nSubgroups_Local": 8,
+                  "nSubgroups_Global": 0
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "nSubgroups_Local": 0,
+                  "nSubgroups_Global": 8
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 14715500000.0,
+                  "median": 14691100000.0,
+                  "stdev": 128427664.46525453,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "nSubgroups_Local": 4,
+                  "nSubgroups_Global": 4
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 16298360000.0,
+                  "median": 16410499999.999998,
+                  "stdev": 196134757.24613354,
+                  "unit": "B/s"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "seqsize_sweep": {
+        "seqs": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "entries": [
+          {
+            "Q": 1,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 15583300000.0,
+                  "median": 15771500000.0,
+                  "stdev": 543000920.8095323,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 15765240000.0,
+                  "median": 15730000000.0,
+                  "stdev": 152392791.82428545,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 0
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "Q": 2,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "seqSize_Local": 2,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 14495520000.0,
+                  "median": 14502800000.0,
+                  "stdev": 229069819.05087367,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 2
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 13946020000.0,
+                  "median": 13914300000.0,
+                  "stdev": 86316348.39356911,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 15778340000.0,
+                  "median": 15802900000.0,
+                  "stdev": 103441157.18610267,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "Q": 3,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "seqSize_Local": 3,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 16514400000.0,
+                  "median": 16510800000.0,
+                  "stdev": 172579430.98758933,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 3
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 15443540000.0,
+                  "median": 15469300000.0,
+                  "stdev": 96911057.16067697,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "seqSize_Local": 2,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 14564300000.0,
+                  "median": 14537700000.0,
+                  "stdev": 181096659.27343884,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "Q": 4,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "seqSize_Local": 4,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 15827700000.0,
+                  "median": 15851400000.0,
+                  "stdev": 151432872.91734308,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 4
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 14404560000.0,
+                  "median": 14427800000.0,
+                  "stdev": 129383124.86564854,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "seqSize_Local": 2,
+                  "seqSize_Global": 2
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 15974940000.0,
+                  "median": 15947900000.0,
+                  "stdev": 170266329.61334366,
+                  "unit": "B/s"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "case1": {
+      "problem": {
+        "n0": 512,
+        "n1": 64,
+        "n2": 1
+      },
+      "subgroups_sweep": {
+        "sgrps": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "entries": [
+          {
+            "S": 1,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "nSubgroups_Local": 1,
+                  "nSubgroups_Global": 0
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 327955600.0,
+                  "median": 329445000.0,
+                  "stdev": 3287013.279559424,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "nSubgroups_Local": 0,
+                  "nSubgroups_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 326401800.0,
+                  "median": 326996000.0,
+                  "stdev": 2868364.5514473924,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "nSubgroups_Local": 0,
+                  "nSubgroups_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 327183000.0,
+                  "median": 325645000.0,
+                  "stdev": 3321282.508309102,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "S": 2,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "nSubgroups_Local": 2,
+                  "nSubgroups_Global": 0
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 327593200.0,
+                  "median": 328704000.0,
+                  "stdev": 3146034.5993011585,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "nSubgroups_Local": 0,
+                  "nSubgroups_Global": 2
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 328300200.0,
+                  "median": 327286000.0,
+                  "stdev": 1868594.8464019694,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "nSubgroups_Local": 1,
+                  "nSubgroups_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 330982600.0,
+                  "median": 331840000.0,
+                  "stdev": 1712532.56903336,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "S": 4,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "nSubgroups_Local": 4,
+                  "nSubgroups_Global": 0
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "nSubgroups_Local": 0,
+                  "nSubgroups_Global": 4
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 327041800.0,
+                  "median": 327964000.0,
+                  "stdev": 2580350.5963337617,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "nSubgroups_Local": 2,
+                  "nSubgroups_Global": 2
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 333001400.0,
+                  "median": 333686000.0,
+                  "stdev": 1740780.8018242847,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "S": 8,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "nSubgroups_Local": 8,
+                  "nSubgroups_Global": 0
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "nSubgroups_Local": 0,
+                  "nSubgroups_Global": 8
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 328149800.0,
+                  "median": 328584000.0,
+                  "stdev": 3263579.277419196,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "nSubgroups_Local": 4,
+                  "nSubgroups_Global": 4
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 328494000.0,
+                  "median": 330473000.0,
+                  "stdev": 4680135.41470757,
+                  "unit": "B/s"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "seqsize_sweep": {
+        "seqs": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "entries": [
+          {
+            "Q": 1,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 329520800.0,
+                  "median": 329270000.0,
+                  "stdev": 3062031.2212647344,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 330400000.0,
+                  "median": 330009000.0,
+                  "stdev": 2216175.196143121,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 0
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "Q": 2,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "seqSize_Local": 2,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 330051400.0,
+                  "median": 332307000.0,
+                  "stdev": 3656423.5668204525,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 2
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 329499400.0,
+                  "median": 330962000.0,
+                  "stdev": 3267622.882157609,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 329957600.0,
+                  "median": 330340000.0,
+                  "stdev": 3166126.861008573,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "Q": 3,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "seqSize_Local": 3,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 329853600.0,
+                  "median": 329568000.0,
+                  "stdev": 3678160.7224263595,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 3
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 327419400.0,
+                  "median": 328020000.0,
+                  "stdev": 3331880.2199358847,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "seqSize_Local": 2,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "Q": 4,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "seqSize_Local": 4,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 4
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 328498800.0,
+                  "median": 328307000.0,
+                  "stdev": 1910660.278542473,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "seqSize_Local": 2,
+                  "seqSize_Global": 2
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 326233000.0,
+                  "median": 327311000.0,
+                  "stdev": 8156820.704171448,
+                  "unit": "B/s"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "case2": {
+      "problem": {
+        "n0": 512,
+        "n1": 6144,
+        "n2": 64
+      },
+      "subgroups_sweep": {
+        "sgrps": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "entries": [
+          {
+            "S": 1,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "nSubgroups_Local": 1,
+                  "nSubgroups_Global": 0
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 4878266000.0,
+                  "median": 4808890000.0,
+                  "stdev": 290606873.3357833,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "nSubgroups_Local": 0,
+                  "nSubgroups_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 1552834000.0,
+                  "median": 1550860000.0,
+                  "stdev": 16286785.440964095,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "nSubgroups_Local": 0,
+                  "nSubgroups_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 1548850000.0,
+                  "median": 1542290000.0,
+                  "stdev": 16075240.278142035,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "S": 2,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "nSubgroups_Local": 2,
+                  "nSubgroups_Global": 0
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "nSubgroups_Local": 0,
+                  "nSubgroups_Global": 2
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 1125962000.0,
+                  "median": 1125750000.0,
+                  "stdev": 2358340.518245828,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "nSubgroups_Local": 1,
+                  "nSubgroups_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 4457106000.0,
+                  "median": 4460810000.0,
+                  "stdev": 9226926.89902765,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "S": 4,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "nSubgroups_Local": 4,
+                  "nSubgroups_Global": 0
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "nSubgroups_Local": 0,
+                  "nSubgroups_Global": 4
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 850919400.0,
+                  "median": 850958000.0,
+                  "stdev": 258681.85092889683,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "nSubgroups_Local": 2,
+                  "nSubgroups_Global": 2
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "S": 8,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "nSubgroups_Local": 8,
+                  "nSubgroups_Global": 0
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "nSubgroups_Local": 0,
+                  "nSubgroups_Global": 8
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 836927000.0,
+                  "median": 837228000.0,
+                  "stdev": 944173.7128304304,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "nSubgroups_Local": 4,
+                  "nSubgroups_Global": 4
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "seqsize_sweep": {
+        "seqs": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "entries": [
+          {
+            "Q": 1,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 0
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "Q": 2,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "seqSize_Local": 2,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 2
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "Q": 3,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "seqSize_Local": 3,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 3
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "seqSize_Local": 2,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "Q": 4,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "seqSize_Local": 4,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 4
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "seqSize_Local": 2,
+                  "seqSize_Global": 2
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "case3": {
+      "problem": {
+        "n0": 8,
+        "n1": 6144,
+        "n2": 64
+      },
+      "subgroups_sweep": {
+        "sgrps": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "entries": [
+          {
+            "S": 1,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "nSubgroups_Local": 1,
+                  "nSubgroups_Global": 0
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 5027108000.0,
+                  "median": 5033370000.0,
+                  "stdev": 32643992.862393536,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "nSubgroups_Local": 0,
+                  "nSubgroups_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 3746458000.0,
+                  "median": 3748360000.0,
+                  "stdev": 7753658.491318791,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "nSubgroups_Local": 0,
+                  "nSubgroups_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 3744538000.0,
+                  "median": 3745350000.0,
+                  "stdev": 3949958.227627224,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "S": 2,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "nSubgroups_Local": 2,
+                  "nSubgroups_Global": 0
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "nSubgroups_Local": 0,
+                  "nSubgroups_Global": 2
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 3457498000.0,
+                  "median": 3450170000.0,
+                  "stdev": 12985860.387359785,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "nSubgroups_Local": 1,
+                  "nSubgroups_Global": 1
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 3685978000.0,
+                  "median": 3689310000.0,
+                  "stdev": 20775016.726828404,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "S": 4,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "nSubgroups_Local": 4,
+                  "nSubgroups_Global": 0
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "nSubgroups_Local": 0,
+                  "nSubgroups_Global": 4
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 1586724000.0,
+                  "median": 1586620000.0,
+                  "stdev": 1907493.119253645,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "nSubgroups_Local": 2,
+                  "nSubgroups_Global": 2
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "S": 8,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "nSubgroups_Local": 8,
+                  "nSubgroups_Global": 0
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "nSubgroups_Local": 0,
+                  "nSubgroups_Global": 8
+                },
+                "runs_completed": 5,
+                "status": "ok",
+                "bytes_per_sec": {
+                  "mean": 942662000.0,
+                  "median": 942053000.0,
+                  "stdev": 1315673.9717726426,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "nSubgroups_Local": 4,
+                  "nSubgroups_Global": 4
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "seqsize_sweep": {
+        "seqs": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "entries": [
+          {
+            "Q": 1,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 0
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "Q": 2,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "seqSize_Local": 2,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 2
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "Q": 3,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "seqSize_Local": 3,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 3
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "seqSize_Local": 2,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              }
+            }
+          },
+          {
+            "Q": 4,
+            "variants": {
+              "local_only": {
+                "config": {
+                  "seqSize_Local": 4,
+                  "seqSize_Global": 1
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "global_only": {
+                "config": {
+                  "seqSize_Local": 1,
+                  "seqSize_Global": 4
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              },
+              "split": {
+                "config": {
+                  "seqSize_Local": 2,
+                  "seqSize_Global": 2
+                },
+                "runs_completed": 0,
+                "status": "error",
+                "bytes_per_sec": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "stdev": 0.0,
+                  "unit": "B/s"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "notes": {
+    "subgroups_sweep_holds_seqSize": {
+      "seqSize_Local": 3,
+      "seqSize_Global": 1
+    },
+    "seqsize_sweep_holds_subgroups": {
+      "nSubgroups_Local": 4,
+      "nSubgroups_Global": 4
+    },
+    "units": {
+      "bytes_per_sec": "B/s"
+    }
+  }
+}
