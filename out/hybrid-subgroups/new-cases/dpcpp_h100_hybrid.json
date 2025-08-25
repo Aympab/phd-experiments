@@ -1,7 +1,7 @@
 {
-  "impl": "ndrange",
+  "impl": "hybrid",
   "hardware": "h100",
-  "executable": "/home/ac.amillan/source/parallel-advection/build_dpcpp_h100/src/advection",
+  "executable": "/home/ac.amillan/source/hybrid-paradv/build_dpcpp_h100/src/advection",
   "runs_per_config": 5,
   "cases": {
     "case0": {
@@ -12,14 +12,14 @@
       },
       "sweeps": {
         "50": {
-          "wg_size": 1024,
+          "wg_size": 512,
           "result": {
             "runs_completed": 5,
             "status": "ok",
             "bytes_per_sec": {
-              "mean": 372440400000.0,
-              "median": 372436000000.0,
-              "stdev": 46046715.40946216,
+              "mean": 365826200000.0,
+              "median": 354673000000.0,
+              "stdev": 46985009797.80679,
               "unit": "B/s"
             }
           }
@@ -39,9 +39,9 @@
             "runs_completed": 5,
             "status": "ok",
             "bytes_per_sec": {
-              "mean": 869306600000.0,
-              "median": 869038000000.0,
-              "stdev": 885527413.4661219,
+              "mean": 504746400000.00006,
+              "median": 520820000000.00006,
+              "stdev": 43016396098.464615,
               "unit": "B/s"
             }
           }
@@ -56,14 +56,14 @@
       },
       "sweeps": {
         "50": {
-          "wg_size": 128,
+          "wg_size": 512,
           "result": {
-            "runs_completed": 0,
-            "status": "error",
+            "runs_completed": 5,
+            "status": "ok",
             "bytes_per_sec": {
-              "mean": 0.0,
-              "median": 0.0,
-              "stdev": 0.0,
+              "mean": 223491600000.0,
+              "median": 238831000000.0,
+              "stdev": 34876129548.732895,
               "unit": "B/s"
             }
           }
@@ -78,14 +78,14 @@
       },
       "sweeps": {
         "50": {
-          "wg_size": 256,
+          "wg_size": 512,
           "result": {
             "runs_completed": 5,
             "status": "ok",
             "bytes_per_sec": {
-              "mean": 351258200000.0,
-              "median": 351421000000.0,
-              "stdev": 380651678.04700404,
+              "mean": 433954400000.0,
+              "median": 433774000000.0,
+              "stdev": 1508125425.818423,
               "unit": "B/s"
             }
           }

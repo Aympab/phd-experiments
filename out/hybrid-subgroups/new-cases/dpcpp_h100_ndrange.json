@@ -12,14 +12,14 @@
       },
       "sweeps": {
         "50": {
-          "wg_size": 1024,
+          "wg_size": 512,
           "result": {
             "runs_completed": 5,
             "status": "ok",
             "bytes_per_sec": {
-              "mean": 372440400000.0,
-              "median": 372436000000.0,
-              "stdev": 46046715.40946216,
+              "mean": 372433600000.0,
+              "median": 372493000000.0,
+              "stdev": 128698484.839566,
               "unit": "B/s"
             }
           }
@@ -34,14 +34,14 @@
       },
       "sweeps": {
         "50": {
-          "wg_size": 512,
+          "wg_size": 128,
           "result": {
             "runs_completed": 5,
             "status": "ok",
             "bytes_per_sec": {
-              "mean": 869306600000.0,
-              "median": 869038000000.0,
-              "stdev": 885527413.4661219,
+              "mean": 868547200000.0,
+              "median": 869145000000.0,
+              "stdev": 1142731245.7441602,
               "unit": "B/s"
             }
           }
@@ -59,13 +59,7 @@
           "wg_size": 128,
           "result": {
             "runs_completed": 0,
-            "status": "error",
-            "bytes_per_sec": {
-              "mean": 0.0,
-              "median": 0.0,
-              "stdev": 0.0,
-              "unit": "B/s"
-            }
+            "status": "error"
           }
         }
       }
@@ -78,14 +72,14 @@
       },
       "sweeps": {
         "50": {
-          "wg_size": 256,
+          "wg_size": 512,
           "result": {
             "runs_completed": 5,
             "status": "ok",
             "bytes_per_sec": {
-              "mean": 351258200000.0,
-              "median": 351421000000.0,
-              "stdev": 380651678.04700404,
+              "mean": 351231800000.0,
+              "median": 351281000000.0,
+              "stdev": 320085457.33913,
               "unit": "B/s"
             }
           }

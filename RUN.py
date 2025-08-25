@@ -11,7 +11,7 @@ from typing import List, Tuple, Dict, Any, Optional
 # --- Constants & Defaults ---
 HYBRID_ROOT = Path("/home/ac.amillan/source/hybrid-paradv")
 PARADV_ROOT = Path("/home/ac.amillan/source/parallel-advection")
-OUT_DIR     = Path("/home/ac.amillan/source/phd-experiments/out/hybrid-subgroups/new-cases")
+OUT_DIR     = Path("/home/ac.amillan/source/phd-experiments/out/hybrid-subgroups/comparison")
 
 DEFAULT_RUNS  = 5
 WG_SIZES = [128, 256, 512, 1024]
